@@ -41,7 +41,7 @@ public class NotasUI extends JFrame{
                     Alumnos.adiccionarNotas(Double.parseDouble(txtNota4.getText()));
                     Alumnos.adiccionarNotas(Double.parseDouble(txtNota5.getText()));
 
-                    if(Alumnos.notaMenor10() == true){
+                    if((Alumnos.notaMenor10() == true) && (Alumnos.notaMayor0() == true)){
 
                         lbPromedio.setText("PROMEDIO ="+String.valueOf(String.format("%.3f",Alumnos.Promedio())));
                         lbDesviacionEstandar.setText("DESVIACION ="+String.valueOf(String.format("%.3f",Alumnos.DesviacionEstandar())));
@@ -49,7 +49,7 @@ public class NotasUI extends JFrame{
                         lbMenorNota.setText("NOTA MENOR ="+String.valueOf(Alumnos.notaMenor()));
                     }
                     else{
-                        JOptionPane.showMessageDialog(null, "Las notas deben ser inferiores o iguales a 5", "Notas Incorrectas",
+                        JOptionPane.showMessageDialog(null, "Las notas deben ser superiores a 0 e inferiores o iguales a 5", "Notas Incorrectas",
                                 JOptionPane.ERROR_MESSAGE);
 
                         txtNota1.setText("");

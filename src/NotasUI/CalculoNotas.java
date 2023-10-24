@@ -83,5 +83,17 @@ public class CalculoNotas {
         }
         return NotaMenorque10;
     }
+    public boolean notaMayor0(){
+
+        double NotaMayor0;
+        boolean NotaMayorque0=false;
+
+        NotaMayor0=notaMenor();
+        if(NotaMayor0 >=0) {
+            NotaMayorque0 = true;
+        }
+        return NotaMayorque0;
+
+    }
 
 }
